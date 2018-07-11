@@ -38,7 +38,7 @@ FROM alpine:3.6
 LABEL caddy_version="0.10.10"
 
 RUN apk add --no-cache openssh-client git hugo
-RUN apk add --update yarn
+RUN apk add --update nodejs-current yarn
 
 # install caddy
 COPY --from=builder /go/bin/caddy /usr/bin/caddy
